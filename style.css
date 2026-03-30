@@ -1,5 +1,4 @@
 .Profielen {
-  margin-top: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +14,22 @@
   font-size: 48px;
   color: #ffffff; 
   text-align: center;
-  margin-top: 5%;
 }
-.body {
+body {
   background-color: #000000; 
+}
+.Namen {
+  font-size: 24px;
+  color: #ffffff; 
+  text-align: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8%;
+}
+.Netflix_Logo {
+  width: 15%; 
+  height: auto;
+  margin-top:  5%;
+  margin-left: 5%;
 }
