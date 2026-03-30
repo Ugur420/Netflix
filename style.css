@@ -1,0 +1,22 @@
+.Profielen {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2%; 
+}
+
+.Profielen img {
+  width: 150px; 
+  height: auto;
+}       
+
+.Netflix_Titel {
+  font-size: 48px;
+  color: #ffffff; 
+  text-align: center;
+  margin-top: 5%;
+}
+.body {
+  background-color: #000000; 
+}
