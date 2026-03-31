@@ -54,6 +54,7 @@ h1 {
   font-size: 24px;
 }
 
+
 .card:hover img,
 .card:hover .plus {
   border-color: white;
@@ -90,4 +91,25 @@ h1 {
 .manage-btn:hover {
   border-color: white;
   color: white;
+}
+
+.Netflix_Logo {
+  width: 100%; 
+  height: auto;
+  margin-top:  100%;
+  margin-left: 50%;
+}
+.Netflix_Beschrijving {
+  font-size: 18px;
+  color: #ffffff; 
+  text-align:right;
+  margin-right: 5%;
+}
+.Netflix_Titel {
+  font-size: 100%;
+  color: #ffffff; 
+  text-align: center;
+}
+.Spiderman_FFH {
+  display: flex;
 }
