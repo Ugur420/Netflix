@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+  height: 60px;
+  background: #141414;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-left img {
+  height: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+.menu a:first-child {
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search {
+  padding: 4px 8px;
+  background: #000;
+  border: 1px solid #555;
+  border-radius: 3px;
+  color: white;
+  font-size: 13px;
+}
+
+.search::placeholder {
+  color: #888;
+}
+
+.header-right img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+/* HERO GEBIED */
+.hero {
+  position: relative;
+  height: 320px;
+  background-image: url('Schermafbeelding 2026-03-30 131435.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 40px 60px 40px;
+}
+
+.hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 36px;
+}
+
+.hero p {
+  margin: 0 0 20px 0;
+  max-width: 400px;
+  font-size: 14px;
+}
+
+.hero-buttons button {
+  padding: 8px 18px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-play {
+  background: white;
+  color: black;
+}
+
+.btn-info {
+  background: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+/* RIJ MET FILMS */
+.row {
+  padding: 20px 30px 40px 30px;
+}
+
+.row h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.row-items {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.row-items img {
+  width: 170px;
+  height: 95px;
+  object-fit: cover;
+  border-radius: 3px;
+  transition: transform 0.2s ease;
+}
+
+.row-items img:hover {
+  transform: scale(1.06);
+}
+
+.row-items::-webkit-scrollbar {
+  height: 8px;
+}
+
+.row-items::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  .hero {
+    height: 280px;
+    padding: 20px;
+  }
+}
