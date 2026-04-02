@@ -5,22 +5,22 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #141414;
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* HEADER */
 .header {
-  height: 60px;
-  background: #141414;
+  height: 68px;
+  background: #0b0b0b;
   position: sticky;
   top: 0;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
+  padding: 0 32px;
 }
 
 .header-left {
@@ -30,49 +30,86 @@ body {
 }
 
 .header-left img {
-  height: 30px;
+  height: 38px;
 }
 
 .menu a {
-  color: white;
+  color: #e5e5e5;
   text-decoration: none;
-  margin-right: 15px;
-  font-size: 14px;
+  margin-right: 22px;
+  font-size: 18px;
 }
 
 .menu a:first-child {
   font-weight: bold;
+  color: #fff;
 }
 
 .header-right {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 16px;
 }
 
-.search {
-  padding: 4px 8px;
-  background: #000;
-  border: 1px solid #555;
-  border-radius: 3px;
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 2px 6px;
+  transition: 0.2s;
+}
+
+.search-wrap.active {
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.search-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   color: white;
-  font-size: 13px;
+  font-size: 22px;
 }
 
-.search::placeholder {
+.search-input {
+  width: 0;
+  opacity: 0;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-wrap.active .search-input {
+  width: 180px;
+  opacity: 1;
+}
+
+.search-input::placeholder {
   color: #888;
 }
 
+.bell {
+  font-size: 24px;
+  line-height: 1;
+}
+
 .header-right img {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 4px;
 }
 
 /* HERO GEBIED */
 .hero {
   position: relative;
-  height: 320px;
+  height: 420px;
   background-image: url('Schermafbeelding 2026-03-30 131435.png');
   background-size: cover;
   background-position: center;
@@ -80,18 +117,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 40px 40px 60px 40px;
+  padding: 40px;
 }
 
 .hero h1 {
   margin: 0 0 10px 0;
-  font-size: 36px;
+  font-size: 54px;
 }
 
 .hero p {
   margin: 0 0 20px 0;
-  max-width: 400px;
-  font-size: 14px;
+  max-width: 520px;
+  font-size: 19px;
 }
 
 .hero-buttons button,
@@ -118,23 +155,23 @@ body {
 
 /* RIJ MET FILMS */
 .row {
-  padding: 20px 30px 40px 30px;
+  padding: 20px 32px 16px;
 }
 
 .row h2 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .row-items {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   overflow-x: auto;
 }
 
 .row-items img {
-  width: 170px;
-  height: 95px;
+  width: 285px;
+  height: 160px;
   object-fit: cover;
   border-radius: 3px;
   transition: transform 0.2s ease;
@@ -154,12 +191,41 @@ body {
 }
 
 @media (max-width: 800px) {
+  .header {
+    padding: 0 16px;
+  }
+
   .menu {
     display: none;
+  }
+
+  .search-wrap.active .search-input {
+    width: 120px;
   }
 
   .hero {
     height: 280px;
     padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .row {
+    padding: 16px;
+  }
+
+  .row h2 {
+    font-size: 18px;
+  }
+
+  .row-items img {
+    width: 220px;
+    height: 124px;
   }
 }
