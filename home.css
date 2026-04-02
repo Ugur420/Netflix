@@ -94,13 +94,16 @@ body {
   font-size: 14px;
 }
 
-.hero-buttons button {
+.hero-buttons button,
+.hero-buttons a {
   padding: 8px 18px;
   margin-right: 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
   font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-play {
